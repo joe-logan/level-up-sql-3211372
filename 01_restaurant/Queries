@@ -1,0 +1,45 @@
+-- Q1
+-- List all customers and emails
+--sorted alphabetically by last name
+SELECT FirstName, LastName, Email
+FROM Customers
+ORDER BY LastName Asc;
+
+--Q2
+--Create a new table for customer
+--response
+CREATE TABLE AnniversaryAttendees(
+  customerID INTEGER,
+  PartySize INTEGER
+);
+
+--Q3
+--output all dishes sorted by price
+--low to high
+--Output appetizers and beverages by
+--type
+--Output all items except beverages
+--sorted by type
+SELECT Type, Name, Price, Description
+FROM Dishes
+ORDER BY Price;
+
+SELECT Type, Name, Price, Description
+FROM Dishes
+WHERE Type IN ('Appetizer', 'Beverage')
+ORDER BY Type;
+
+SELECT Type, Name, Price, Description
+FROM Dishes
+WHERE Type != 'Beverages'
+ORDER BY Type;
+
+--Q4
+--Add new records to customer table
+INSERT INTO Customers(FirstName,
+LastName, Email, Address, City,
+State, Phone, Birthday)
+VALUES ('Anna', 'Smith',
+'asmith@samoca.org', '479 Lapis Dr.',
+'Memphis', 'TN', '555-555-1212',
+'1973')
