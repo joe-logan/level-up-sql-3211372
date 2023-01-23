@@ -11,3 +11,5 @@ AND r.Date > '2022-07-24';
 
 DELETE FROM Reservations
 WHERE ReservationID = 2000;
+
+git add .
